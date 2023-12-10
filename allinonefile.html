@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Root.f</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <header>
-        <h1>Root.f</h1>
-        <button id="theme-toggle">Change root permissions for backround</button>
-        <br>
-        <br>
-        <a href="" target="_blank">One HTML - One Root.f</a>
-    </header>
+    <p class="root3">root3 with red color</p>
+    <p class="root3">root3 with red color</p>
+    <p class="root2">root2 with green color</p>
+    <p class="root2">root2 with green color</p>
+    <script>
+        /*
+   root.js | MIT
+   Powered by EcomateDev
 
-    <main>
-        <p>Give root rights to your tags!
-        <br>
-        - Give priority to different root permissions
-        <br>
-        - Capture mode
-        <br>
-        - Different connection types
-        <br>
-        - h2 class="root5" join us now.</p>
-    </main>
+   Explanation:
+   This script demonstrates how to change the priority of root classes.
+   In this example, we are changing the priority from root3 to root2.
 
-    <script src="script.js"></script>
+   To change the priority of root classes:
+   - Locate the line 'element.classList.remove('root3');'.
+   - Replace 'root3' with the class you want to remove the priority from.
+   - Locate the line 'element.classList.add('root2');'.
+   - Replace 'root2' with the class you want to assign the higher priority to.
+*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all elements with the class 'root3'
+    let root3Elements = document.querySelectorAll('.root3');
+
+    // For each element with class 'root3'
+    root3Elements.forEach(function(element) {
+        // Remove 'root3' class
+        element.classList.remove('root3');
+        
+        // Add 'root2' class to increase its priority
+        element.classList.add('root2');
+    });
+});
+
+    </script>
+    <style>
+    /* root.css | MIT */
+    /* Powered by EcomateDev */
+
+    .root3 {
+        color: red;
+    }
+
+    .root2 {
+        color: green;
+    }
+    </style>
 </body>
-
 </html>
+
